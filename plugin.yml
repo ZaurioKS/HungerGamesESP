@@ -12,10 +12,10 @@ commands:
         usage: /hg <leave-make>
         description: HungerGames-Commands
     lang:
-        usage: /lang <en-es-it-fr>
-        description: HungerGames-Language-Commands
+        usage: /lang <en>
+        description: HungerGames-EnglishLanguage
     setrank:
         usage: /setrank
         description: HungerRanks-Commands
     start:
-        description: HungerGames-Force start
+        description: HungerGames-ForceStart
