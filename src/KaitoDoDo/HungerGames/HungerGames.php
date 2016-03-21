@@ -1,5 +1,5 @@
 <?php
-# plugin hecho por KaitoDoDo
+
 namespace KaitoDoDo\HungerGames;
 
 use pocketmine\plugin\PluginBase;
