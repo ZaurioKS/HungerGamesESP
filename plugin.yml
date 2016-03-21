@@ -1,0 +1,21 @@
+name: HungerGamesDoDo
+main: KaitoDoDo\HungerGames\HungerGames
+author: KaitoDoDo
+version: 3.0.0
+api: 
+- 1.0.0
+- 1.1.0
+- 2.0.0
+
+commands:
+    hg:
+        usage: /hg <leave-make>
+        description: HungerGames-Commands
+    lang:
+        usage: /lang <en-es-it-fr>
+        description: HungerGames-Language-Commands
+    setrank:
+        usage: /setrank
+        description: HungerRanks-Commands
+    start:
+        description: HungerGames-Force start
