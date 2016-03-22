@@ -636,6 +636,19 @@ class GameSender extends PluginTask {
                                                                                 $pl->sendMessage("§a§l-------------------");
 									}
 								}
+								if($time == 420)
+								{
+									foreach($playersArena as $pl)
+									{
+										$playerlang = new Config($this->plugin->getDataFolder() . "/languages.yml", Config::YAML);
+										$lang = new Config($this->plugin->getDataFolder() . "/lang.yml", Config::YAML);
+										$toUse = $lang->get($playerlang->get($pl->getName()));
+										$pl->sendMessage("§a§l---------------------------");
+                                                                                $pl->sendMessage("§b§lLos cofres han sido rellenados");
+                                                                                $pl->sendMessage("§a§l---------------------------");
+									}
+									$this->refillChests($levelArena);
+								}
 								if($time>=180)
 								{
 								$time2 = $time - 180;
@@ -650,17 +663,7 @@ class GameSender extends PluginTask {
 										$pl->sendMessage($this->prefix . $minutes . " " . $toUse["deathmatchminutes"]);
 									}
 								}
-								else if($time2 == 300)
-								{
-									foreach($playersArena as $pl)
-									{
-										$playerlang = new Config($this->plugin->getDataFolder() . "/languages.yml", Config::YAML);
-									$lang = new Config($this->plugin->getDataFolder() . "/lang.yml", Config::YAML);
-										$toUse = $lang->get($playerlang->get($pl->getName()));
-										$pl->sendMessage($this->prefix . $toUse["chestrefill"]);
-									}
-									$this->refillChests($levelArena);
-								}
+								
 								else if($time2 == 30 || $time2 == 15 || $time2 == 10 || $time2 ==5 || $time2 ==4 || $time2 ==3 || $time2 ==2 || $time2 ==1)
 								{
 									foreach($playersArena as $pl)
